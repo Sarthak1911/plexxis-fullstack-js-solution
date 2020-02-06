@@ -5,13 +5,23 @@ CREATE DATABASE plexxisdb
     CONNECTION LIMIT = -1
 
 CREATE TABLE employees (
-	id SERIAL PRIMARY KEY,
-	name TYPE text,
-	code varchar(10),
-	profession varchar(20),
-	color varchar(10),
-	city TYPE text,
-	branch TYPE text,
-	assigned boolean
+
 );
+
+ALTER TABLE employees
+ADD id SERIAL PRIMARY KEY;
+ALTER TABLE employees
+ADD name text;
+ALTER TABLE employees
+ADD code varchar(10);
+ALTER TABLE employees
+ADD profession varchar(20);
+ALTER TABLE employees
+ADD color varchar(10);
+ALTER TABLE employees
+ADD city text;
+ALTER TABLE employees
+ADD branch text;
+ALTER TABLE employees
+ADD assigned boolean;
 

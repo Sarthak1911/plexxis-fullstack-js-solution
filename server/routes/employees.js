@@ -4,8 +4,9 @@ const router = express.Router();
 
 //Links to local modules
 const EmployeesHelper = require("../database/employeesHelpers");
-const empSchema = require("../validation/joi/employees");
 const emp = new EmployeesHelper();
+const empSchema = require("../validation/joi/employees");
+const empValidate = require("../middleware/validate");
 
 router.get("/", async (req, res) => {
   try {
@@ -16,13 +17,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/create", async (req, res) => {
+router.post("/create", empValidate, async (req, res) => {
   const { body: employee } = req;
-
-  //Validate the request body
-  const { error } = empSchema.validate(employee);
-
-  if (error) return res.status(404).json(error);
 
   try {
     //Once validation is done
@@ -35,7 +31,7 @@ router.post("/create", async (req, res) => {
   }
 });
 
-router.put("/update/:id", async (req, res) => {
+router.put("/update/:id", empValidate, async (req, res) => {
   const id = req.params.id;
   let { body: updatedEmployee } = req;
 
