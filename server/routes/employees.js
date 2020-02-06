@@ -5,7 +5,6 @@ const router = express.Router();
 //Links to local modules
 const EmployeesHelper = require("../database/employeesHelpers");
 const emp = new EmployeesHelper();
-const empSchema = require("../validation/joi/employees");
 const empValidate = require("../middleware/validate");
 
 router.get("/", async (req, res) => {
@@ -40,7 +39,7 @@ router.put("/update/:id", empValidate, async (req, res) => {
     const user = await emp.getEmployee(req.params.id);
 
     //If the array returned is empty i.e. user not found
-    if (user.length <= 0) res.status(404).send("User not found");
+    if (user.length <= 0) return res.status(404).send("User not found");
 
     //If the employee exists, add the employee id to the employee object
     updatedEmployee = [...Object.values(updatedEmployee), id];
@@ -63,7 +62,7 @@ router.delete("/delete/:id", async (req, res) => {
     const user = await emp.getEmployee(req.params.id);
 
     //If the array returned is empty i.e. user not found
-    if (user.length <= 0) res.status(404).send("User not found");
+    if (user.length <= 0) return res.status(404).send("User not found");
 
     //If the employee exists, delete the employee
 

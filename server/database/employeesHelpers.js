@@ -11,7 +11,6 @@ class EmployeesHelper {
     const query = `SELECT * FROM ${this.table}`;
 
     const { rows } = await pool.query(query);
-    console.log(rows);
     return rows;
   }
 
