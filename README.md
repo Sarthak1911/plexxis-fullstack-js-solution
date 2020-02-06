@@ -2,4 +2,6 @@
 
 ### Server Side
 
+Database - Postgres
+
 ### Client side

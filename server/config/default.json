@@ -1,0 +1,4 @@
+{
+  "connectionString": "postgresql://postgres:password@localhost/plexxisdb",
+  "employeesTable": "employees"
+}
