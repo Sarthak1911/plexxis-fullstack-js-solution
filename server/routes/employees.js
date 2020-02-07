@@ -16,6 +16,17 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const response = await emp.getEmployee(req.params.id);
+    !response
+      ? res.status(404).send("NOT FOUND")
+      : res.status(200).json(response);
+  } catch (error) {
+    return res.status(500).send("Something went wrong on the server!");
+  }
+});
+
 router.post("/create", empValidate, async (req, res) => {
   const { body: employee } = req;
 
@@ -30,7 +41,7 @@ router.post("/create", empValidate, async (req, res) => {
   }
 });
 
-router.put("/update/:id", empValidate, async (req, res) => {
+router.post("/update/:id", empValidate, async (req, res) => {
   const id = req.params.id;
   let { body: updatedEmployee } = req;
 

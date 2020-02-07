@@ -24,7 +24,7 @@ app.use(express.json());
 connectToDB();
 
 //Pass the call to routes
-app.use("/employees", employeesRouter);
+app.use("/api/employees", employeesRouter);
 
 app.listen(8080, error => {
   if (error) console.log(error);

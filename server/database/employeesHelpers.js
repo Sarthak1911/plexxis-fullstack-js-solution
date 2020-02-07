@@ -18,7 +18,7 @@ class EmployeesHelper {
     const query = `SELECT * FROM ${this.table} WHERE id = ${id}`;
 
     const { rows } = await pool.query(query);
-    return rows;
+    return rows[0];
   }
 
   async createEmployee(employee) {

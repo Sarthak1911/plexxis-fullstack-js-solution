@@ -8,8 +8,6 @@ Let's start by the structure of the server. So navigate under `./server` folder
 
 ```
 server
-      | config
-            - default.json
       | data
             - employees.json
       | database

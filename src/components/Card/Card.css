@@ -1,0 +1,7 @@
+.to-new {
+  color: #000000;
+}
+.to-new:hover {
+  text-decoration: none;
+  color: #007bff;
+}
