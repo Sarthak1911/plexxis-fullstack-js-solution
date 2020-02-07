@@ -54,7 +54,7 @@ class Card extends Component {
           }
         >
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">#ID: {employee.id}</li>
+            <li className="list-group-item">#{employee.id}</li>
             <li className="list-group-item">Code: {employee.code}</li>
             <li className="list-group-item">
               Profession: {employee.profession}

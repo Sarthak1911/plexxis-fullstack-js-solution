@@ -59,13 +59,18 @@ class Container extends Component {
     return showSpinner ? (
       <Spinner />
     ) : (
-      <div className="d-flex justify-content-center">
-        <div className="container">
-          <Cards data={data} onDelete={this.handleDelete} />
+      <React.Fragment>
+        <div className="d-flex justify-content-center">
+          <div className="container">
+            <div className="mt-2">
+              <span className="h2">Employees</span>
+            </div>
+            <hr />
+            <Cards data={data} onDelete={this.handleDelete} />
+          </div>
+          <AddButton />
         </div>
-        <AddButton />
-        {/* <Table data={data} columns={columns} onDelete={this.handleDelete} /> */}
-      </div>
+      </React.Fragment>
     );
   };
 
