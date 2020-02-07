@@ -4,7 +4,7 @@ import "./addButton.css";
 const addButton = () => {
   return (
     <Link
-      to="/new"
+      to="/employee/new"
       className="bg-danger text-light floating-btn d-flex justify-content-center align-items-center shadow"
     >
       <span className="h4">+</span>

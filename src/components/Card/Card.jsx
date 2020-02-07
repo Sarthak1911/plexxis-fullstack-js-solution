@@ -27,7 +27,10 @@ class Card extends Component {
       <div className="card w-100 shadow-sm m-2 bg-light">
         <div className="d-flex flex-row justify-content-between align-items-center card-body">
           <div>
-            <Link to={`/${employee.id}`} className="text-capitalize to-new h3">
+            <Link
+              to={`/employee/${employee.id}`}
+              className="text-capitalize to-new h3"
+            >
               {employee.name}
             </Link>
             <br />

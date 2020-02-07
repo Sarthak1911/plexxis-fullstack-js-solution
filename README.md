@@ -60,8 +60,44 @@ This folder consists of all the routes accessible by the client (i.e. just emplo
 
 This folder consists of all the validation schemas. I have made a seperate folder for `Joi` schemas.
 
-#### index.js
+#### Important Third Party Libraries
 
-It's the starting or entering point of the server.
+- Express: Used to create rest API.
+- @hapi/joi: Used for data validation.
+- node-postgres: Client to connect and query PostgresDB.
 
 ### Client side
+
+I have used React in the front-end, also I have used a bunch of third party libraries to make life a bit easy.
+
+**Component Tree**
+
+![React-Tree](https://i.imgur.com/zcmCD7p.jpg)
+
+#### Routing
+
+I have used a package called `react-router-dom` for routing in the application. All the necessary routes are present in the `App.jsx` file. All the routes are placed from the most specific to the most generic. If not route is found, the router redirects the user to `not-found` page.
+
+#### Container
+
+This is the component that is responsible to hold the list of employees in the state, also all methods updating the employees list are called here in this component i.e. update, delete and get.
+
+#### Card
+
+Instead of going for a table, I went with something much more aesthetic i.e. bootstrap's `.card` class.
+
+One special thing about `Card` component is that it holds its own state called `showDetails`. And as the name suggests, I use it to toggle the employee details.
+
+This component also holds the delete button, which further raises an event to delete an employee from the list present with `Container` component.
+
+#### Form class
+
+This is an interesting class, I developed it on my own. It constists of validation methods for all your input fields (FYI it uses joi-browser for validation).
+
+It really has a simple interface. It expects `data` and `errors` in the state. So basically, based on the form fields I can polulate `data`. All the validation errors are stored in `errors`. And whenever an input field has invalid data, the erros will start showing under it.
+
+#### Important Third Party Libraries
+
+- react-router-dom: Used for routing.
+- axios: Used for making http request.
+- joi-browser: Same as the one used on the server. Provides me with easy way to validate input fields.

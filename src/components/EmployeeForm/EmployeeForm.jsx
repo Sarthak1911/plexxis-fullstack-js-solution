@@ -33,10 +33,9 @@ class EmployeeForm extends Form {
       const { data } = await this.empService.getEmployee(match.params.id);
 
       if (data) this.setState({ data });
-      else history.replace("/");
+      else history.replace("/not-found");
     } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
+      history.replace("/not-found");
     }
   }
 
@@ -109,6 +108,11 @@ class EmployeeForm extends Form {
     }
   };
 
+  getBtnValue = () => {
+    const { id } = this.props.match.params;
+    return id === "new" ? "Create" : "Update";
+  };
+
   render() {
     return (
       <div className="d-flex align-items-center justify-content-center form-container vh-100">
@@ -123,7 +127,7 @@ class EmployeeForm extends Form {
             {this.renderInput("city", "text", "City")}
             {this.renderInput("branch", "text", "Branch")}
             {this.renderCheckBox("assigned")}
-            {this.renderSubmitButton("Submit")}
+            {this.renderSubmitButton(this.getBtnValue())}
           </form>
         </div>
       </div>
