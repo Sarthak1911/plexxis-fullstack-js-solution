@@ -62,6 +62,9 @@ class Card extends Component {
             <li className="list-group-item">Color: {employee.color}</li>
             <li className="list-group-item">City: {employee.city}</li>
             <li className="list-group-item">Branch: {employee.branch}</li>
+            <li className="list-group-item">
+              Assigned: {employee.assigned.toString()}
+            </li>
           </ul>
           <div className="d-flex justify-content-end mt-3">
             <br />
