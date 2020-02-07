@@ -10,7 +10,7 @@ import Spinner from "./../Spinner/spinner";
 class Container extends Component {
   state = {
     data: [],
-    showSpinner: ""
+    showSpinner: true
   };
 
   constructor(props) {
@@ -19,8 +19,10 @@ class Container extends Component {
     this.empService = new EmployeeService();
   }
 
-  async componentDidMount() {
-    this.refreshEmployees();
+  componentDidMount() {
+    setTimeout(() => {
+      this.refreshEmployees();
+    }, 200);
   }
 
   handleDelete = async id => {

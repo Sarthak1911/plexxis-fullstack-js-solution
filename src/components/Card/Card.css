@@ -5,3 +5,13 @@
   text-decoration: none;
   color: #007bff;
 }
+
+.show-details {
+  display: block;
+  transition: ease 1s all;
+}
+
+.hide-details {
+  display: none;
+  transition: ease 1s all;
+}

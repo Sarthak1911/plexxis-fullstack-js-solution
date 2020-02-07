@@ -12,12 +12,7 @@ const Cards = ({ data, onDelete }) => {
       );
 
     return data.map(employee => (
-      <Card
-        id={employee.id}
-        name={employee.name}
-        onDelete={onDelete}
-        key={employee.id}
-      />
+      <Card employee={employee} onDelete={onDelete} key={employee.id} />
     ));
   };
 

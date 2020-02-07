@@ -8,7 +8,7 @@ class EmployeesHelper {
   }
 
   async getEmployees() {
-    const query = `SELECT * FROM ${this.table}`;
+    const query = `SELECT * FROM ${this.table} ORDER BY id`;
 
     const { rows } = await pool.query(query);
     return rows;
