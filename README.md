@@ -110,7 +110,7 @@ I tried my level best to keep things short and sweet, I have used comments in ap
 
 #### Employees Page
 
-Users can click the `More Info` link to get employee details. To hide the details the user must click `Show less` link.
+Users can click the `Show more` link to get employee details. To hide the details the user must click `Show less` link.
 
 ![Employees Page](https://i.imgur.com/yrBtmsP.png)
 ![Employees Page](https://i.imgur.com/mWHAA1l.png)
