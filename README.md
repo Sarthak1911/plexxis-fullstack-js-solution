@@ -105,3 +105,35 @@ It really has a simple interface. It expects `data` and `errors` in the state. S
 ### Direction of my efforts
 
 I tried my level best to keep things short and sweet, I have used comments in appropriate places. I believe my code is modularized appropriately.
+
+### Screenshots from the application
+
+#### Employees Page
+
+Users can click the `More Info` link to get employee details. To hide the details the user must click `Show less` link.
+
+![Employees Page](https://i.imgur.com/yrBtmsP.png)
+![Employees Page](https://i.imgur.com/mWHAA1l.png)
+
+#### Creating an Employee
+
+**Before Creating**
+![Employee Creation](https://i.imgur.com/G91Nx8J.png)
+**After Creating**
+![Employee Creation](https://i.imgur.com/cxcCWiG.png)
+**Employee Form**
+![Employee Creation](https://i.imgur.com/Fv1GRga.png)
+
+#### Updating an employee
+
+**Before Update**
+![Employee Update](https://i.imgur.com/mWHAA1l.png)
+
+**After Update**
+![Employee Update](https://i.imgur.com/kNb06P0.png)
+
+**Employee Form**
+![Employee Update](https://i.imgur.com/xdYyf4L.png)
+
+**Empty List**
+![Empty List](https://i.imgur.com/NQbmyvA.png)
