@@ -6,7 +6,7 @@ const Cards = ({ data, onDelete }) => {
       return (
         <div className="d-flex justify-content-center align-items-center w-100">
           <span className="h3 text-dark">
-            No employees on the list, press add to get add a new one!
+            No employees on the list, press add to add a new one!
           </span>
         </div>
       );
