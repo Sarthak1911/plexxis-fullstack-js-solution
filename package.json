@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@hapi/joi": "^17.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "concurrently": "^3.6.0",
     "config": "^3.2.5",
